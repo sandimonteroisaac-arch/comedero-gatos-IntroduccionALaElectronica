@@ -1,2 +1,13 @@
-# comedero-gatos-IntroduccionALaElectronica
-   Mi primer repositorio de GitHub es un proyecto de Wokwi que simula a un alimentador de gatos automático que dispensa comida cuando algo se le acerca utilizando un ESP32, un sensor PIR, un servomotor, led y resistencias.
+# Comedero Automático para Gatos — Equipo Isaac Sandi Montero 
+## Descripción 
+Pequeño sistema que dispensa alimento automáticamente usando 
+<Arduino/ESP32> y un motor. 
+## Funcionamiento - El motor entrega porciones controladas. - Se puede activar con botón o temporizador. 
+## Lista de Materiales 
+Ver archivo en `bom/`. 
+## Diagrama y conexiones 
+Imagen en `docs/esquema.png`. 
+## Código 
+Código fuente en `firmware/`. 
+## Evidencia 
+Fotos y video en `media/`. 
