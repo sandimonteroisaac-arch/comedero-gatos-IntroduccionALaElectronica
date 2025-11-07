@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "author": "Isaac Sandi Montero",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -175.8, "left": -93.2, "attrs": {} },
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": -164.86,
+      "left": -380.3,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -147.6,
+      "left": 32.6,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -101.65,
+      "left": -9.6,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir1",
+      "top": -264.8,
+      "left": 251.82,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo1",
+      "top": -404.2,
+      "left": -7.8,
+      "rotate": 270,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:12", "servo1:PWM", "violet", [ "h-28.65", "v-211.2" ] ],
+    [ "esp:3V3", "bb1:tp.1", "red", [ "h-19.05", "v-48" ] ],
+    [ "bb1:5t.a", "pir1:OUT", "cyan", [ "v-19.2", "h9.6" ] ],
+    [ "bb1:tp.25", "bb1:30t.c", "red", [ "v0" ] ],
+    [ "pir1:VCC", "bb1:30t.d", "red", [ "v0" ] ],
+    [ "bb1:29t.e", "pir1:GND", "black", [ "v0", "h105.6" ] ],
+    [ "esp:GND.1", "bb1:tn.1", "black", [ "h-38.25", "v-153.6" ] ],
+    [ "bb1:29t.a", "bb1:tn.24", "black", [ "v0" ] ],
+    [ "bb1:7t.a", "bb1:tn.6", "black", [ "v0" ] ],
+    [ "servo1:V+", "bb1:30t.a", "orange", [ "v19.2", "h76.9" ] ],
+    [ "servo1:GND", "bb1:29t.c", "black", [ "v38.4", "h19.2", "v48", "h86.4" ] ],
+    [ "esp:2", "bb1:5t.e", "gray", [ "v17.54", "h248.46", "v-96", "h105.6" ] ],
+    [ "esp:5", "bb1:14t.e", "blue", [ "v7.94", "h181.26", "v-86.4", "h211.2", "v9.6" ] ],
+    [ "r1:1", "bb1:7t.d", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:13t.d", "", [ "$bb" ] ],
+    [ "led1:A", "bb1:14t.c", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:13t.c", "", [ "$bb" ] ]
+  ],
+  "dependencies": {}
+}
